@@ -42,7 +42,7 @@ function About() {
 
           <div className="about-resume">
         <a 
-          href="/Dhavamani_resume.pdf" 
+          href="./Dhavamani_resume.pdf" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="resume-btn"
