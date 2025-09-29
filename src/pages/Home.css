@@ -1,0 +1,187 @@
+/* ===== General Reset ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: auto; /* fixed page, no scroll */
+  height: auto;
+  width: 100%;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 40px 60px;
+}
+
+/* ===== Home Container ===== */
+.home-container {
+  display: flex;
+  height: 100vh; /* full viewport height */
+  width: 100%;
+  background-color: #0a0a0a; /* professional black background */
+  color: #ffffff; /* default text color */
+  overflow: visible; /* ensure no scroll */
+}
+
+/* ===== Sidebar ===== */
+.home-container > .home-sidebar {
+  flex: 0 0 220px; /* width of sidebar */
+  background-color: #111111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-top: 30px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* ===== Main Content ===== */
+.home-main-content {
+  flex: 1;
+  margin-left: 290px; /* shift content right to leave sidebar space */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px; /* adjust padding to prevent overflow */
+  height: auto; /* fixed */
+  overflow: visible;
+}
+
+/* ===== About Section ===== */
+.home-about-section {
+  max-width: 500px;
+}
+
+/* Title */
+.home-about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Stylish Name */
+.home-about-name {
+  color: orange;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 2rem;
+}
+/* "I'm a" + role container */
+.home-about-role-container {
+  font-size: 1.5rem;
+  min-height: 2rem; /* keeps space fixed to avoid jump */
+  position: relative; /* for absolute role text positioning */
+}
+
+/* "I'm a" static text */
+.white-bold {
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Role text */
+.orange-typed {
+  color: orange;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  display: inline-block;
+  position: absolute; /* overlap roles in same spot */
+  left: 90px; /* adjust so it aligns after "I'm a" */
+  top: 0;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/*
+@keyframes blinkCursor {
+  0% { border-color: orange; }
+  50% { border-color: transparent; }
+  100% { border-color: orange; }
+}*/
+
+.role {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Description */
+.home-about-text {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* Button */
+.home-about-btn {
+  padding: 14px 28px;
+  background: #e4820a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home-about-btn:hover {
+  background: #d88351;
+  transform: translateY(-2px);
+}
+
+/* ===== Image Section ===== */
+.home-profile-image-wrapper {
+  position: relative;
+  width: 320px;
+  height: 400px;
+}
+
+.home-profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 2px solid #f0830e;
+  margin-left: -130px; 
+}
+
+/* Top-left corner */
+.home-profile-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -150px;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #f0830e;
+  border-left: 3px solid #f0830e;
+  border-top-left-radius: 3px;
+}
+
+/* Bottom-right corner */
+.home-profile-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: 109px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #f0830e;
+  border-right: 3px solid #f0830e;
+  border-bottom-right-radius: 3px;
+}

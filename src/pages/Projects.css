@@ -1,0 +1,129 @@
+.projects {
+  margin-left: 300px; /* space for sidebar */
+  padding: 0px 50px 30px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-title {
+  font-size: 36px;
+  color: rgb(255, 165, 0);
+  text-align: left;
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+}
+
+.projects-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(255, 165, 0);
+}
+.github-icon {
+  font-size: 18px;
+  margin-right: 3px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.project-links a {
+  border-radius: 30px; /* pill shape */
+}
+
+/* Card style */
+.project-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-card:hover {
+  background-color: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: rgb(255, 165, 0);
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Tech Stack */
+.tech-stack {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-stack li {
+  background-color: #222;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  border-left: 3px solid rgb(255, 165, 0);
+  transition: all 0.3s ease;
+}
+
+.tech-stack li:hover {
+  background-color: #333;
+}
+
+/* Links */
+.project-links a {
+  display: inline-block;
+  margin-top: 10px;
+  background: rgb(221, 146, 7);
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  background: #e69500;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects {
+    margin-left: 20px;
+    padding: 20px;
+  }
+
+  .projects-title::after {
+    width: 100%;
+  }
+}

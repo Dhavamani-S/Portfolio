@@ -1,0 +1,204 @@
+/* About Page Container */
+.about {
+  margin-left: 300px; /* leave space for sidebar */
+  padding: 0px 50px 30px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #0a0a0a; /* dark background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title with underline */
+.about-title {
+  font-size: 36px;
+  color: rgb(255, 165, 0);
+  text-align: left;
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+}
+
+.about-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(255, 165, 0);
+}
+
+/* Intro text */
+.about-intro {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 1115px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  color: #ccc;
+}
+
+/* Info Grid */
+.about-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.info-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 12px;
+  background-color: #1a1a1a;
+  padding: 15px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background-color: #333333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.info-label {
+  font-weight: bold;
+  color: rgb(255, 165, 0);
+  justify-self: start;
+}
+
+.info-value {
+  color: #fff;
+  justify-self: start;
+  line-height: 1.3;
+}
+
+/* Sections (Education, Skills, Languages) */
+.about-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 0;
+}
+
+/* Card styling for sections */
+.about-education,
+.about-skills,
+.about-languages {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+
+.about-education h2,
+.about-skills h2,
+.about-languages h2 {
+  font-size: 24px;
+  color: rgb(255, 165, 0);
+  margin-bottom: 15px;
+}
+
+/* Lists */
+.about-education ul,
+.about-skills ul,
+.about-languages ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-education li,
+.about-skills li,
+.about-languages li {
+  background-color: #222222;
+  padding: 12px 18px;
+  border-left: 4px solid rgb(255, 165, 0);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.about-skills{
+  height: 330px;
+}
+
+.about-languages{
+  margin-top: 30px;
+  height: 180px;
+}
+.about-note{
+  margin-top: 30px;
+}
+
+
+.about-education li:hover,
+.about-skills li:hover,
+.about-languages li:hover {
+  background-color: #333333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Note / small text */
+.about-note {
+  font-size: 16px;
+  background-color: #222222;
+  padding: 12px 18px;
+  border-left: 4px solid rgb(255, 165, 0);
+  border-radius: 6px;
+  color: #ccc;
+  line-height: 25px;
+}
+
+.about-note:hover {
+  background-color: #333333;      /* Slightly lighter background */
+  color: #fff;                     /* Make text brighter */
+  border-left-color: rgb(255, 200, 0); /* Slightly brighter accent */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+/* Resume Button */
+.about-resume {
+  margin-top: 40px;
+  margin-left: -21px;
+}
+
+.resume-btn {
+  display: inline-block;
+  background: rgb(221, 146, 7);
+  color: #111;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: #e69500;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .about {
+    margin-left: 20px;
+    padding: 20px;
+  }
+
+  .about-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .info-item {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+}

@@ -1,0 +1,263 @@
+.certificates {
+  margin-left: 300px;
+  padding: 30px 50px;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Titles */
+/* Section Title */
+.section-main-title {
+  font-size: 40px;
+  color: rgb(255, 165, 0);
+  margin-bottom: 35px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-main-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width:100%;
+  height: 2px;
+  background: rgb(255, 165, 0);
+  border-radius: 2px;
+}
+
+
+.section-sub-title {
+  font-size: 28px;
+  color:rgb(255, 165, 0);
+  margin: 25px 0 15px;
+}
+
+/* Certificates Horizontal Scroll */
+.certificates-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  scrollbar-width: none;
+  
+  
+}
+
+.certificates-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.certificates-scroll::-webkit-scrollbar-thumb {
+  background: rgb(255, 165, 0);
+  border-radius: 10px;
+}
+
+/* Certificate Card */
+.certificate-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  min-width: 300px;
+  max-width: 320px;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  display: flex;
+  object-position: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 400px;
+  border-top: 2px solid rgb(255, 165, 0);
+}
+
+.certificate-img.coursera {
+  padding-bottom: 210px; /* adjust as needed */
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 165, 0, 0.3);
+}
+
+.certificate-details {
+  padding: 15px;
+}
+
+.certificate-details h3 {
+  font-size: 20px;
+  color: rgb(255, 165, 0);
+  margin-bottom: 8px;
+}
+
+.certificate-details p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.certificate-img {
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+  border-top: 2px solid rgb(255, 165, 0);
+}
+
+/* Modal for Certificate Preview */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.9);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal-content img {
+  max-width: 900px;
+  max-height: 80%;
+  border-radius: 10px;
+  border: 3px solid rgb(255, 165, 0);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+/* Hackathon Section */
+.hackathon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* Each hackathon card container */
+.hackathon-card {
+  display: flex;
+  gap: 20px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  flex-wrap: wrap; /* allow images and text to wrap on smaller screens */
+}
+
+/* Hover effect for card */
+.hackathon-card:hover {
+
+  box-shadow: 0 6px 15px rgba(255, 165, 0, 0.3);
+}
+
+/* Left section: images side by side */
+.hackathon-left {
+  display: flex;
+  flex-direction: row; /* side by side */
+  gap: 15px;
+  flex: 0.7;
+  flex-wrap: wrap; /* wrap if small screen */
+}
+
+/* Hackathon images like certificates */
+.hackathon-img {
+  width: 150px; /* smaller like certificate */
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid rgb(255, 165, 0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for image */
+.hackathon-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.4);
+}
+
+/* Right section: description */
+.hackathon-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 300px;
+  max-width: 500px;
+}
+
+.hackathon-right h3 {
+  font-size: 22px;
+  color: rgb(255, 165, 0);
+  margin-bottom: 10px;
+}
+
+.hackathon-right p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Modal popup for hackathon images (same as certificate) */
+.hackathon-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 15, 15, 0.9);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.hackathon-modal-content img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  border: 3px solid rgb(255, 165, 0);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+/* Hackathon images already smaller */
+.hackathon-img {
+  width: 200px;
+  border-radius: 8px;
+  border: 2px solid rgb(255, 165, 0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hackathon-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.4);
+}
+
+/* Modal for hackathon images */
+.hackathon-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.9);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.hackathon-modal-content img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  border: 3px solid rgb(255, 165, 0);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+

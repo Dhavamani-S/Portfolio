@@ -1,0 +1,40 @@
+/* Floating container in top-right corner */
+.theme-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* semi-transparent black */
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 100; /* on top of everything */
+}
+
+/* Background toggle button */
+.switch-btn {
+  background: none;
+  border: 2px solid #ffa500; /* orange border */
+  color: #ffa500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.switch-btn:hover {
+  background-color: #222;
+  transform: scale(1.1);
+}
+
+/* Color picker input */
+.color-picker {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ffa500;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+}

@@ -1,0 +1,119 @@
+/* Sidebar container */
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: #000; /* Black background */
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  position: fixed; /* fixed sidebar */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 100; /* above content */
+  overflow-x: hidden;
+}
+
+.sidebar-menu,
+.sidebar-item {
+  box-sizing: border-box;
+  max-width: 100%;
+  word-wrap: break-word; /* wrap long text */
+}
+
+.sidebar-text {
+  flex-shrink: 1; /* prevent overflow */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Sidebar title */
+.sidebar-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  margin: 50px 0 50px 0;
+}
+
+/* Title corners */
+.sidebar-title::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid rgb(255, 165, 0);
+  border-right: 3px solid rgb(255, 165, 0);
+  border-top-right-radius: 3px;
+}
+
+.sidebar-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  border-bottom: 3px solid rgb(255, 165, 0);
+  border-left: 3px solid rgb(255, 165, 0);
+  border-bottom-left-radius: 3px;
+}
+
+/* Sidebar menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Sidebar items */
+.sidebar-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  text-align: left;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.sidebar-item:hover {
+  background-color: #222;
+  border-left: 4px solid orange;
+  color: orange;
+}
+
+/* Spacing between items */
+.sidebar-item + .sidebar-item {
+  margin-top: 20px;
+}
+
+/* Icon styling */
+.sidebar-icon {
+  font-size: 18px;
+  color: rgb(232, 138, 44);
+  transition: color 0.3s ease;
+}
+
+/* Active item */
+.sidebar-item.active {
+  color: orange;
+  border-left: 4px solid orange;
+}
+
+.sidebar-item.active .sidebar-icon {
+  color: orange;
+}
