@@ -3,30 +3,29 @@ import "./Certificates.css";
 
 function Certificates() {
   const certificates = [
-    { src: "/certificate/NPTEL-Certificate.png", title: "NPTEL Certificate", desc: "Successfully completed NPTEL course with certification." },
-    { src: "/certificate/Python_certificate-Coursera.png", title: "Python Certificate", desc: "Coursera certification for Python specialization." },
-    { src: "/certificate/javascript-hackerrank.png", title: "JavaScript Certificate", desc: "HackerRank certification in JavaScript." },
-    { src: "/certificate/css-hackerrank.png", title: "CSS Certificate", desc: "HackerRank certification in CSS." },
-    { src: "/certificate/Responsive-freecode.png", title: "Responsive Web Design", desc: "FreeCodeCamp Responsive Web Design certification." },
-    { src: "/certificate/GreatLearning-DS.png", title: "Data Science with Python", desc: "Great Learning certification for Data Science using Python." }
+    { src: "./certificate/NPTEL-Certificate.png", title: "NPTEL Certificate", desc: "Successfully completed NPTEL course with certification." },
+    { src: "./certificate/Python_certificate-Coursera.png", title: "Python Certificate", desc: "Coursera certification for Python specialization." },
+    { src: "./certificate/javascript-hackerrank.png", title: "JavaScript Certificate", desc: "HackerRank certification in JavaScript." },
+    { src: "./certificate/css-hackerrank.png", title: "CSS Certificate", desc: "HackerRank certification in CSS." },
+    { src: "./certificate/Responsive-freecode.png", title: "Responsive Web Design", desc: "FreeCodeCamp Responsive Web Design certification." },
+    { src: "./certificate/GreatLearning-DS.png", title: "Data Science with Python", desc: "Great Learning certification for Data Science using Python." }
   ];
-const hackathons = [
-  {
-    src: "/hackathon/Hackspora-certificate.png",
-    presentation: "/hackathon/hackspora-present.jpg",
-    title: "HackSpora Hackathon",
-    desc: `HackSpora 2k25 – AI-Based Medical Imaging Analysis
+
+  const hackathons = [
+    {
+      src: "./hackathon/Hackspora-certificate.png",
+      presentation: "./hackathon/hackspora-present.jpg",
+      title: "HackSpora Hackathon",
+      desc: `HackSpora 2k25 – AI-Based Medical Imaging Analysis
 Participated in my first national-level hackathon with Team HACKAHOLICS, developing an AI solution to detect anomalies in X-rays, CTs & MRIs, generate automated reports, and support rural healthcare. Went through two review rounds and gained hands-on experience in AI, healthcare tech, teamwork, and rapid problem-solving under pressure.`
-  },
-  {
-    src: "/hackathon/ideathon-certificate.png",
-    presentation: "/hackathon/ideathon-present.png",
-    title: "IDEATHON 2025",
-    desc: `IDEATHON 2025 – Developed LungVision, an AI-powered Chest Infection Diagnosis System with Team Scanova. Detected COVID-19, Pneumonia, and other infections using X-rays & CT scans. Reached the final round, gaining hands-on experience in deep learning, model explainability (Grad-CAM), and optimized healthcare solutions.`
-  }
-];
-
-
+    },
+    {
+      src: "./hackathon/ideathon-certificate.png",
+      presentation: "./hackathon/ideathon-present.png",
+      title: "IDEATHON 2025",
+      desc: `IDEATHON 2025 – Developed LungVision, an AI-powered Chest Infection Diagnosis System with Team Scanova. Detected COVID-19, Pneumonia, and other infections using X-rays & CT scans. Reached the final round, gaining hands-on experience in deep learning, model explainability (Grad-CAM), and optimized healthcare solutions.`
+    }
+  ];
 
   const [modalImage, setModalImage] = useState(null);
 
